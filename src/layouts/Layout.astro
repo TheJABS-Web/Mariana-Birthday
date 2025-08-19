@@ -1,0 +1,32 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mi sitio Astro</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+	html {
+		margin: 0;
+		width: 100%;
+		max-height: 100vh;
+	}
+	body {
+		margin: 0;
+		width: 100%;
+	}
+</style>

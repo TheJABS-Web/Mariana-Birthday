@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.nav-a{
+    @apply px-2 h-full flex items-center relative hover:bg-white/10 transition-colors duration-200 rounded-sm;
+}
+
+.nav-a-before{
+    @apply before:w-0  before:bottom-0 before:transition-[width] before:duration-200 before:bg-white before:h-1 before:absolute before:left-1/2 before:-translate-x-1/2 hover:before:w-full;
+}
