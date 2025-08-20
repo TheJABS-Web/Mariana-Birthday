@@ -1,7 +1,7 @@
 ---
 // src/layouts/Layout.astro
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro';
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -20,13 +20,35 @@ import Navbar from '../components/Navbar.astro';
 </html>
 
 <style>
-	html {
-		margin: 0;
-		width: 100%;
-		max-height: 100vh;
-	}
-	body {
-		margin: 0;
-		width: 100%;
-	}
+  html {
+    margin: 0;
+    width: 100%;
+    max-height: 100vh;
+   
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    position: relative; */
+  }
+  html::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/imgs/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+  }
 </style>
